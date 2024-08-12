@@ -8,6 +8,7 @@ const MovieList = (props) => {
     <ul className={classes['movies-list']}>
       {props.movies.map((movie) => (
         <Movie
+          onDelete={props.onDelete.bind(null, movie.id)}
           key={movie.id}
           title={movie.title}
           releaseDate={movie.releaseDate}
